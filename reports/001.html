@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="VELQEN Research Research Note 001: 2026年米国中間選挙と米国債市場の再評価。PDFレポートと分析用Excelを公開。">
+<title>Research Note 001 | VELQEN Research</title>
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:#1b2b39;font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;font-size:15px;line-height:1.85}
+a{color:#254d6b;text-underline-offset:3px}
+.wrap{max-width:990px;margin:0 auto;padding:0 26px}
+header{border-bottom:1px solid #d8dfe4}
+header .wrap{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{text-decoration:none;color:#1b2b39;font-size:18px;font-weight:700;letter-spacing:.11em}
+.logo span{display:block;font-size:9px;font-weight:400;letter-spacing:.3em;line-height:1.2}
+.back{font-size:13px}
+main{padding:61px 0 100px}
+.kicker{font-size:12px;letter-spacing:.14em;color:#536c7e;margin:0 0 16px}
+h1{font-size:clamp(25px,4vw,36px);line-height:1.5;letter-spacing:.025em;font-weight:600;margin:0 0 12px}
+.subtitle{margin:0;color:#54626d;font-size:14px}
+.summary{max-width:780px;margin:32px 0 25px}
+.materials{border-top:1px solid #cbd5dd;border-bottom:1px solid #cbd5dd;margin:31px 0 46px;padding:20px 0}
+.material{display:flex;align-items:baseline;justify-content:space-between;gap:25px;padding:14px 0}
+.material+.material{border-top:1px solid #e3e9ed}
+.material strong{font-size:15px;font-weight:600}
+.material small{display:block;color:#64717a;font-size:12px}
+.action{border-bottom:1px solid #244b69;text-decoration:none;white-space:nowrap;font-size:14px}
+.unavailable{color:#7b838a;font-size:13px;white-space:nowrap}
+h2{font-size:19px;font-weight:600;margin:0 0 15px}
+.preview{width:100%;height:75vh;min-height:580px;border:1px solid #d2dbe1;background:#fff}
+.note{color:#5b6873;font-size:12px;margin:12px 0 0}
+footer{border-top:1px solid #d6dfe5;padding:28px 0 46px;font-size:12px;color:#66737d}
+@media(max-width:600px){main{padding:36px 0 60px}.wrap{padding:0 18px}.material{align-items:start;flex-direction:column;gap:5px}.preview{height:65vh;min-height:400px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="../index.html">VELQEN<span>R E S E A R C H</span></a><a class="back" href="../index.html#research">← リサーチ一覧に戻る</a></div></header>
+<main><div class="wrap">
+<p class="kicker">RESEARCH NOTE 001 / 09 NOVEMBER 2026</p>
+<h1>2026年米国中間選挙と<br>米国債市場の再評価</h1>
+<p class="subtitle">議会構成の変化・金融政策期待・国債需給を切り分ける</p>
+<p class="summary">2026年米国中間選挙前後の米国債利回りとイールドカーブの変化を整理し、財政政策、金融政策期待、国債需給と債券価格の関係を検討したリサーチノートです。PDFの本文と分析に使用したExcelワークブックを同じページで公開します。</p>
+<div class="materials" aria-label="公開資料">
+<div class="material"><div><strong>リサーチレポート</strong><small>PDF / 9ページ</small></div><a class="action" href="261109_VELQEN_Research_001_US_Midterms_Report_v7.pdf" target="_blank" rel="noopener">PDFを開く ↗</a></div>
+<div class="material"><div><strong>分析用ワークブック</strong><small>Excel / 13シート / 計算式・グラフ付き</small></div><span id="excel-status" class="unavailable">公開準備中</span></div>
+</div>
+<h2>レポート本文</h2>
+<iframe class="preview" title="Research Note 001 PDF" src="261109_VELQEN_Research_001_US_Midterms_Report_v7.pdf#view=FitH" loading="lazy"></iframe>
+<p class="note">PDFを表示できない場合は、上の「PDFを開く」から閲覧できます。ExcelはダウンロードしてMicrosoft Excelなどで開いてください。</p>
+</div></main>
+<footer><div class="wrap">© VELQEN Research　｜　本資料は研究・情報提供目的であり、金融商品の売買推奨ではありません。</div></footer>
+<script>
+const workbook='261109_VELQEN_Research_001_US_Midterms_Analysis_Charts.xlsx';
+fetch(workbook,{method:'HEAD',cache:'no-store'}).then(r=>{
+  if(!r.ok) return;
+  const node=document.getElementById('excel-status');
+  const link=document.createElement('a');
+  link.className='action';
+  link.href=workbook;
+  link.download=workbook;
+  link.textContent='Excelをダウンロード ↓';
+  node.replaceWith(link);
+}).catch(()=>{});
+</script>
+</body></html>
