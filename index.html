@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2b">
+  <meta name="description" content="VELQEN Researchは、金融市場・マクロ経済・企業動向をデータと公開情報から考察する独立系リサーチプロジェクトです。">
+  <meta property="og:title" content="VELQEN Research | Independent Research">
+  <meta property="og:description" content="市場を読み解き、本質を捉える。独立した視点で金融・経済を考察するリサーチプロジェクト。">
+  <meta property="og:type" content="website">
+  <title>VELQEN Research | 市場を読み解き、本質を捉える。</title>
+  <style>
+    :root{--ink:#112031;--muted:#637182;--navy:#101b2b;--navy2:#192b3d;--accent:#a9c4c4;--line:#dce3e6;--white:#fff;--paper:#f7f9f8;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--white);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}button{font:inherit}a:focus-visible,button:focus-visible{outline:3px solid #70a8c6;outline-offset:4px}::selection{background:#a9c4c4;color:#102034}
+    .container{width:min(var(--max),calc(100% - 64px));margin:auto}.eyebrow{font:600 11px/1.5 Arial,sans-serif;letter-spacing:.23em;text-transform:uppercase}.site-header{height:86px;position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid #e6eaec;backdrop-filter:blur(12px)}.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{font-family:Arial,sans-serif;letter-spacing:.18em;line-height:1}.brand strong{font-size:25px;letter-spacing:.18em;font-weight:700;display:block}.brand small{display:block;font-size:9px;letter-spacing:.43em;margin-top:7px;color:#697480}.nav{display:flex;align-items:center;gap:35px}.nav a{font-size:12px;font-weight:650;letter-spacing:.06em}.nav a:hover{color:#487586}.menu-button{display:none;background:none;border:0;font-size:25px;cursor:pointer}
+    .hero{background:var(--navy);color:white;min-height:665px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:600px;height:600px;border:1px solid rgba(186,210,213,.11);border-radius:50%;top:50px;right:-130px;box-shadow:0 0 0 105px rgba(186,210,213,.03),0 0 0 210px rgba(186,210,213,.025)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 60%,rgba(134,169,184,.09));pointer-events:none}.hero-content{padding:132px 0 113px;position:relative;z-index:1}.hero .eyebrow{color:#aac2c9}.hero h1{font-size:clamp(38px,5.8vw,70px);line-height:1.38;letter-spacing:.045em;font-weight:600;margin:27px 0 21px}.hero-lead{max-width:600px;color:#c6d2dd;font-size:16px;line-height:2.15;margin:0}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:39px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:13px 24px;border-radius:2px;font-size:13px;font-weight:700;transition:transform .2s,background .2s;min-height:48px}.btn:hover{transform:translateY(-2px)}.btn-primary{background:#d7e5e5;color:#132b3b}.btn-primary:hover{background:white}.btn-outline{color:white;border:1px solid #63788c}.btn-outline:hover{background:#25364a}.hero-bottom{position:absolute;bottom:32px;left:0;right:0;color:#869caf;font-size:10px;letter-spacing:.15em;z-index:1}.hero-bottom .container{display:flex;justify-content:space-between}
+    section.content-section{padding:112px 0;scroll-margin-top:86px}.section-top{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:41px}.section-top h2{font-size:clamp(28px,3.6vw,40px);margin:12px 0 0;letter-spacing:.025em;line-height:1.4}.section-top .eyebrow{color:#72828e}.section-link{font-size:13px;font-weight:650;border-bottom:1px solid currentColor;padding-bottom:5px}.research{background:var(--paper)}.research-intro{color:var(--muted);font-size:14px;max-width:660px;margin:-15px 0 36px}.empty-state{border:1px solid var(--line);background:#fff;padding:68px 40px;text-align:center}.empty-icon{display:inline-grid;place-items:center;width:59px;height:59px;border-radius:50%;background:#edf2f2;font-size:24px;color:#44636a}.empty-state h3{font-size:20px;margin:22px 0 7px;letter-spacing:.04em}.empty-state p{font-size:13px;color:var(--muted);margin:0}.report-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.report-card{background:white;border:1px solid var(--line);padding:30px;transition:box-shadow .2s,transform .2s}.report-card:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(11,30,48,.07)}.report-card .meta{font-size:11px;color:#657a82;letter-spacing:.06em}.report-card h3{font-size:20px;line-height:1.6;margin:12px 0}.report-card p{font-size:13px;color:var(--muted);margin:0 0 20px}.report-card a{font-size:12px;font-weight:700;border-bottom:1px solid #667b80}.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.topic{border-top:2px solid #233c4a;padding:27px 7px 5px}.topic .number{font-size:11px;color:#6d8790}.topic h3{font-size:18px;margin:13px 0}.topic p{font-size:13px;color:var(--muted);margin:0;line-height:1.95}.about-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:100px;align-items:start}.about-layout .section-top{margin-bottom:25px}.about-copy{color:#48596a;font-size:15px;line-height:2.25}.principles{border-top:1px solid var(--line)}.principle{padding:22px 0;border-bottom:1px solid var(--line);display:flex;gap:24px}.principle span{font:700 12px Arial,sans-serif;color:#7e969c}.principle strong{display:block;font-size:14px;margin-bottom:3px}.principle p{margin:0;font-size:12px;color:var(--muted);line-height:1.9}.contact{background:#eaf0ef}.contact-inner{display:flex;align-items:center;justify-content:space-between;gap:50px}.contact h2{font-size:34px;margin:14px 0}.contact p{font-size:14px;color:#596c77;max-width:620px}.contact-note{display:inline-block;border:1px solid #97adb1;padding:13px 19px;font-size:12px;color:#3e5a62;white-space:nowrap}.footer{background:#101b2b;color:#d1d9e2;padding:45px 0 28px}.footer-top{display:flex;align-items:center;justify-content:space-between;gap:25px}.footer .brand strong{font-size:21px;color:white}.footer .brand small{color:#9eafbd}.footer-links{display:flex;gap:24px}.footer-links a{font-size:12px}.footer-bottom{margin-top:42px;padding-top:20px;border-top:1px solid #304052;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:11px;color:#9aaaba}.disclaimer{max-width:790px;line-height:1.9}.footnote{white-space:nowrap}
+    @media(max-width:800px){.container{width:min(var(--max),calc(100% - 36px))}.site-header{height:73px}.brand strong{font-size:21px}.nav{display:none;position:absolute;top:73px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:20px 24px;flex-direction:column;align-items:start;gap:20px}.nav.open{display:flex}.menu-button{display:block}.hero{min-height:590px}.hero-content{padding:102px 0 115px}.hero h1{font-size:clamp(35px,8vw,55px)}.hero-lead{font-size:14px}.hero-bottom{bottom:22px}.hero-bottom .container{gap:12px;flex-wrap:wrap}section.content-section{padding:76px 0;scroll-margin-top:73px}.section-top{align-items:start}.topics{grid-template-columns:1fr;gap:15px}.topic{padding:20px 0}.about-layout{grid-template-columns:1fr;gap:30px}.report-list{grid-template-columns:1fr}.contact-inner{display:block}.contact-note{margin-top:15px}.footer-top,.footer-bottom{align-items:start;flex-direction:column}.footer-links{flex-wrap:wrap}.empty-state{padding:50px 22px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="VELQEN Research ホーム"><strong>VELQEN</strong><small>R E S E A R C H</small></a>
+      <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">☰</button>
+      <nav class="nav" id="site-nav" aria-label="メインメニュー">
+        <a href="#top">ホーム</a><a href="#research">リサーチ</a><a href="#focus">研究領域</a><a href="#about">私たちについて</a><a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+    <div class="hero">
+      <div class="container hero-content">
+        <div class="eyebrow">Independent Financial & Economic Research</div>
+        <h1>市場を読み解き、<br>本質を捉える。</h1>
+        <p class="hero-lead">VELQEN Researchは、金融市場、マクロ経済、企業動向を独立した視点で考察するリサーチプロジェクトです。公開情報とデータを起点に、複雑な事象を明快に伝えることを目指します。</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#research">リサーチを見る <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#about">VELQENについて <span aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="hero-bottom"><div class="container"><span>INDEPENDENT PERSPECTIVES</span><span>TOKYO, JAPAN · EST. 2026</span></div></div>
+    </div>
+    <section class="content-section research" id="research">
+      <div class="container">
+        <div class="section-top"><div><div class="eyebrow">Research & Publications</div><h2>リサーチ</h2></div><span class="section-link">PUBLICATIONS</span></div>
+        <p class="research-intro">金融市場や経済に関する考察、データ分析、調査レポートを掲載します。記事やPDFは準備が整い次第、順次公開します。</p>
+        <div id="report-list" class="report-list" aria-live="polite"></div>
+        <div id="empty-state" class="empty-state"><div class="empty-icon" aria-hidden="true">▤</div><h3>レポートを準備中です</h3><p>最初のリサーチ公開まで、もう少々お待ちください。</p></div>
+      </div>
+    </section>
+    <section class="content-section" id="focus">
+      <div class="container"><div class="section-top"><div><div class="eyebrow">Areas of Focus</div><h2>研究領域</h2></div></div>
+        <div class="topics">
+          <article class="topic"><span class="number">01 / MARKETS</span><h3>金融市場</h3><p>金利、債券、為替、株式などの市場動向を、経済指標や政策の変化とあわせて分析します。</p></article>
+          <article class="topic"><span class="number">02 / MACROECONOMICS</span><h3>マクロ経済</h3><p>景気、インフレ、金融政策、国際経済の変化を、中長期的な視点から考察します。</p></article>
+          <article class="topic"><span class="number">03 / CORPORATE ANALYSIS</span><h3>企業・産業分析</h3><p>企業の事業構造、財務情報、競争環境を整理し、産業の変化や成長要因を探ります。</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="content-section" id="about" style="background:#fbfcfc">
+      <div class="container about-layout">
+        <div><div class="section-top"><div><div class="eyebrow">About Us</div><h2>VELQENについて</h2></div></div>
+          <p class="about-copy">VELQEN Researchは、個人が運営する非営利の独立系リサーチプロジェクトです。市場や経済の動きを、ニュースの見出しだけでなく、その背景にあるデータや構造から理解することを目指しています。</p>
+          <p class="about-copy">特定の立場にとらわれず、一次情報、公的統計、企業開示資料などを参考に、自分自身の問いを深め、その過程と考察を発信していきます。</p>
+        </div>
+        <div class="principles">
+          <div class="principle"><span>01</span><div><strong>独立した視点</strong><p>特定の金融商品やサービスの販売を目的とせず、独立した立場で考察します。</p></div></div>
+          <div class="principle"><span>02</span><div><strong>根拠を大切に</strong><p>公表資料やデータを重視し、事実と見解を区別するよう努めます。</p></div></div>
+          <div class="principle"><span>03</span><div><strong>分かりやすく伝える</strong><p>複雑な市場や経済の事象を、丁寧かつ明快な言葉で整理します。</p></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="content-section contact" id="contact"><div class="container contact-inner"><div><div class="eyebrow">Contact</div><h2>お問い合わせ</h2><p>レポートへのご意見やご質問については、連絡先の公開準備が整い次第、こちらでご案内します。</p></div><span class="contact-note">CONTACT INFORMATION COMING SOON</span></div></section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer-top"><a href="#top" class="brand"><strong>VELQEN</strong><small>R E S E A R C H</small></a><div class="footer-links"><a href="#research">リサーチ</a><a href="#focus">研究領域</a><a href="#about">私たちについて</a><a href="#contact">お問い合わせ</a></div></div><div class="footer-bottom"><div class="disclaimer">当サイトの内容は情報提供・学習・研究を目的とするものであり、特定の金融商品の売買や投資判断を推奨するものではありません。掲載情報の正確性・完全性を保証するものではありません。</div><span class="footnote">© <span id="year">2026</span> VELQEN Research</span></div></div></footer>
+  <script>
+    // レポートを追加するときは、reports に項目を入れてください。URLは同じリポジトリ内のPDF等も指定できます。
+    // 例: { title: '国債市場の現状', date: '2026.11.20', category: '金融市場', description: '金利動向を考察します。', url: 'reports/jgb-market.pdf' }
+    const reports = [];
+    const reportList = document.getElementById('report-list');
+    if (reports.length) {
+      document.getElementById('empty-state').hidden = true;
+      reports.forEach(report => {
+        const card = document.createElement('article');card.className = 'report-card';
+        const meta = document.createElement('div');meta.className = 'meta';meta.textContent = `${report.date}  /  ${report.category}`;
+        const title = document.createElement('h3');title.textContent = report.title;
+        const description = document.createElement('p');description.textContent = report.description;
+        const link = document.createElement('a');link.href = report.url;link.textContent = 'レポートを読む ↗';link.target = '_blank';link.rel = 'noopener noreferrer';
+        card.append(meta,title,description,link);reportList.appendChild(card);
+      });
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuButton = document.getElementById('menu-button');const nav = document.getElementById('site-nav');
+    menuButton.addEventListener('click',()=>{const open = nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');menuButton.textContent = open?'×':'☰';});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','メニューを開く');menuButton.textContent='☰';}));
+  </script>
+</body>
+</html>
