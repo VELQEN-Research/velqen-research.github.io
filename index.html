@@ -82,7 +82,7 @@
         date: '2026.11.09',
         category: '金融市場・米国債',
         description: '議会構成の変化、金融政策期待、国債需給を切り分け、金利・イールドカーブ・債券損益を検証するリサーチノート。',
-        url: 'reports/261109_VELQEN_Research_001_US_Midterms_Report_v7.pdf'
+        url: 'reports/001.html'
       }
     ];
     const reportList = document.getElementById('report-list');
@@ -91,7 +91,7 @@
       const meta = document.createElement('div');meta.className = 'meta';meta.textContent = `${report.date}  /  ${report.category}`;
       const title = document.createElement('h3');title.textContent = report.title;
       const description = document.createElement('p');description.textContent = report.description;
-      const link = document.createElement('a');link.href = report.url;link.textContent = 'PDFを読む ↗';link.target = '_blank';link.rel = 'noopener noreferrer';
+      const link = document.createElement('a');link.href = report.url;link.textContent = 'レポート・分析データを見る ↗';link.target = '_blank';link.rel = 'noopener noreferrer';
       card.append(meta,title,description,link);reportList.appendChild(card);
       document.getElementById('empty-state').hidden = true;
     };
