@@ -99,7 +99,7 @@
     reports.forEach(async report => {
       try {
         const res = await fetch(report.url, {method:'HEAD', cache:'no-store'});
-        if (res.ok && (res.headers.get('content-type') || '').includes('pdf')) addReport(report);
+        if (res.ok) addReport(report);
       } catch (error) { /* PDFがまだ存在しない場合は準備中の表示を維持する */ }
     });
     document.getElementById('year').textContent = new Date().getFullYear();
