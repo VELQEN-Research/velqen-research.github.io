@@ -45,24 +45,12 @@ footer{border-top:1px solid #d6dfe5;padding:28px 0 46px;font-size:12px;color:#66
 <p class="summary">2026年米国中間選挙前後の米国債利回りとイールドカーブの変化を整理し、財政政策、金融政策期待、国債需給と債券価格の関係を検討したリサーチノートです。PDFの本文と分析に使用したExcelワークブックを同じページで公開します。</p>
 <div class="materials" aria-label="公開資料">
 <div class="material"><div><strong>リサーチレポート</strong><small>PDF / 9ページ</small></div><a class="action" href="261109_VELQEN_Research_001_US_Midterms_Report_v7.pdf" target="_blank" rel="noopener">PDFを開く ↗</a></div>
-<div class="material"><div><strong>分析用ワークブック</strong><small>Excel / 13シート / 計算式・グラフ付き</small></div><span id="excel-status" class="unavailable">公開準備中</span></div>
+<div class="material"><div><strong>分析用ワークブック</strong><small>Excel / 13シート / 計算式・グラフ付き</small></div><a class="action" href="./261109_VELQEN_Excel_001_v3.xlsx" download="261109_VELQEN_Excel_001_v3.xlsx">Excelをダウンロード ↓</a></div>
 </div>
 <h2>レポート本文</h2>
 <iframe class="preview" title="Research Note 001 PDF" src="261109_VELQEN_Research_001_US_Midterms_Report_v7.pdf#view=FitH" loading="lazy"></iframe>
 <p class="note">PDFを表示できない場合は、上の「PDFを開く」から閲覧できます。ExcelはダウンロードしてMicrosoft Excelなどで開いてください。</p>
 </div></main>
 <footer><div class="wrap">© VELQEN Research　｜　本資料は研究・情報提供目的であり、金融商品の売買推奨ではありません。</div></footer>
-<script>
-const workbook='261109_VELQEN_Excel_001_v3.xlsx';
-fetch(workbook,{method:'HEAD',cache:'no-store'}).then(r=>{
-  if(!r.ok) return;
-  const node=document.getElementById('excel-status');
-  const link=document.createElement('a');
-  link.className='action';
-  link.href=workbook;
-  link.download=workbook;
-  link.textContent='Excelをダウンロード ↓';
-  node.replaceWith(link);
-}).catch(()=>{});
-</script>
+
 </body></html>
