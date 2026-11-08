@@ -43,7 +43,7 @@
     <section class="content-section research" id="research">
       <div class="container">
         <div class="section-top"><div><div class="eyebrow">Research & Publications</div><h2>リサーチ</h2></div><span class="section-link">PUBLICATIONS</span></div>
-        <p class="research-intro">金融市場や経済に関する考察、データ分析、調査レポートを掲載します。記事やPDFは準備が整い次第、順次公開します。</p>
+        <p class="research-intro">金融市場や経済に関する調査・分析レポートを公開します。</p>
         <div id="report-list" class="report-list" aria-live="polite"></div>
         <div id="empty-state" class="empty-state"><div class="empty-icon" aria-hidden="true">▤</div><h3>レポートを準備中です</h3><p>最初のリサーチ公開まで、もう少々お待ちください。</p></div>
       </div>
@@ -76,19 +76,32 @@
   <script>
     // レポートを追加するときは、reports に項目を入れてください。URLは同じリポジトリ内のPDF等も指定できます。
     // 例: { title: '国債市場の現状', date: '2026.11.20', category: '金融市場', description: '金利動向を考察します。', url: 'reports/jgb-market.pdf' }
-    const reports = [];
+    const reports = [
+      {
+        title: '2026年米国中間選挙と米国債市場の再評価',
+        date: '2026.11.09',
+        category: '金融市場・米国債',
+        description: '議会構成の変化、金融政策期待、国債需給を切り分け、金利・イールドカーブ・債券損益を検証するリサーチノート。',
+        url: 'reports/261109_VELQEN_Research_001_US_Midterms_Report_v7.pdf'
+      }
+    ];
     const reportList = document.getElementById('report-list');
-    if (reports.length) {
+    const addReport = (report) => {
+      const card = document.createElement('article'); card.className = 'report-card';
+      const meta = document.createElement('div');meta.className = 'meta';meta.textContent = `${report.date}  /  ${report.category}`;
+      const title = document.createElement('h3');title.textContent = report.title;
+      const description = document.createElement('p');description.textContent = report.description;
+      const link = document.createElement('a');link.href = report.url;link.textContent = 'PDFを読む ↗';link.target = '_blank';link.rel = 'noopener noreferrer';
+      card.append(meta,title,description,link);reportList.appendChild(card);
       document.getElementById('empty-state').hidden = true;
-      reports.forEach(report => {
-        const card = document.createElement('article');card.className = 'report-card';
-        const meta = document.createElement('div');meta.className = 'meta';meta.textContent = `${report.date}  /  ${report.category}`;
-        const title = document.createElement('h3');title.textContent = report.title;
-        const description = document.createElement('p');description.textContent = report.description;
-        const link = document.createElement('a');link.href = report.url;link.textContent = 'レポートを読む ↗';link.target = '_blank';link.rel = 'noopener noreferrer';
-        card.append(meta,title,description,link);reportList.appendChild(card);
-      });
-    }
+    };
+    // PDFのアップロードが完了するまでは公開一覧に表示しない。
+    reports.forEach(async report => {
+      try {
+        const res = await fetch(report.url, {method:'HEAD', cache:'no-store'});
+        if (res.ok && (res.headers.get('content-type') || '').includes('pdf')) addReport(report);
+      } catch (error) { /* PDFがまだ存在しない場合は準備中の表示を維持する */ }
+    });
     document.getElementById('year').textContent = new Date().getFullYear();
     const menuButton = document.getElementById('menu-button');const nav = document.getElementById('site-nav');
     menuButton.addEventListener('click',()=>{const open = nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');menuButton.textContent = open?'×':'☰';});
